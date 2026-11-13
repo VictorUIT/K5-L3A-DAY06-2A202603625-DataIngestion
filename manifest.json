@@ -1,0 +1,724 @@
+{
+  "manifest_version": "1.1",
+  "generated_at": "2026-11-13T19:01:55+07:00",
+  "review_method": "AI-assisted page-by-page text audit: verified physical page IDs, extracted text, chapter continuity, normalized character count, and in-scope/out-of-scope disposition. The student should spot-check the PDF visually.",
+  "reviewer": "Copilot AI assistant; not an independent human reviewer.",
+  "documents": [
+    {
+      "source_id": "pg17_sql_ddl_queries",
+      "title": "PostgreSQL 17 Documentation — Chapter 5 Data Definition and Chapter 7 Queries",
+      "source_path_or_url": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+      "related_html_source": "https://www.postgresql.org/docs/17/sql.html",
+      "local_file_name": "starter/postgresql-17-A4.pdf",
+      "snapshot_or_version": "PostgreSQL 17 A4 PDF; SHA-256 identifies the local snapshot.",
+      "source_last_modified_header": "2026-11-12T14:03:51Z",
+      "license_or_permission": "PostgreSQL License. The official notice permits use, copying, modification, and distribution of the software and documentation, subject to retaining the copyright notice and license terms.",
+      "license_verification_url": "https://www.postgresql.org/about/licence/",
+      "license_verification_note": "Official PostgreSQL license page states the license covers software and documentation and reproduces the permission and notice-retention conditions.",
+      "accessed_at": "2026-11-13",
+      "effective_date": null,
+      "snapshot_sha256": "5546B8F52250EA574E5CE9C216571516D16950A73D2EC3ED7DE26D2E7559F575",
+      "total_physical_pages_in_file": 3120,
+      "reviewed_physical_page_range": "97-194",
+      "physical_page_ranges_included": [
+        {
+          "start": 97,
+          "end": 149
+        },
+        {
+          "start": 154,
+          "end": 184
+        }
+      ],
+      "counting_method": "Physical PDF page numbers (1-based). Include pages 97-149 (Chapter 5: Data Definition) and 154-184 (Chapter 7: Queries) only when normalized extracted text has at least 300 characters. Exclude pages 150-153 (Chapter 6) and 185-194 (Chapter 8) as outside the fixed topic. Do not count cover, contents, blank, or references-only pages.",
+      "ocr_and_extraction_note": "Native PDF text layer extracted with pypdf; no OCR used. Extraction errors are listed in error_pages_log.",
+      "audit_log_path": "starter/outputs/corpus_page_audit.csv",
+      "audit_scope": "All physical pages 97-194, including the prior 45-page selection.",
+      "summary_metrics": {
+        "total_included_content_pages": 84,
+        "total_included_normalized_characters": 210707,
+        "total_excluded_pages_in_audit_scope": 14,
+        "total_error_pages": 0,
+        "minimum_included_page_characters": 850,
+        "maximum_included_page_characters": 4365
+      },
+      "excluded_pages_log": [
+        {
+          "physical_page_number": 150,
+          "chapter": "Chapter 6. Data Manipulation",
+          "char_count": 2281,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 151,
+          "chapter": "Chapter 6. Data Manipulation",
+          "char_count": 2472,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 152,
+          "chapter": "Chapter 6. Data Manipulation",
+          "char_count": 2995,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 153,
+          "chapter": "Chapter 6. Data Manipulation",
+          "char_count": 1345,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 185,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 1680,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 186,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 2015,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 187,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 2776,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 188,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 2645,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 189,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 2237,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 190,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 3191,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 191,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 2503,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 192,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 3152,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 193,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 3839,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        },
+        {
+          "physical_page_number": 194,
+          "chapter": "Chapter 8. Data Types",
+          "char_count": 2477,
+          "reason": "Out of the fixed topic scope; page text was available and reviewed."
+        }
+      ],
+      "error_pages_log": [],
+      "pages": [
+        {
+          "page_id": "pg17_p0097",
+          "physical_page_number": 97,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3457,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0098",
+          "physical_page_number": 98,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2696,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0099",
+          "physical_page_number": 99,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1546,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0100",
+          "physical_page_number": 100,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3271,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0101",
+          "physical_page_number": 101,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3417,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0102",
+          "physical_page_number": 102,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2482,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0103",
+          "physical_page_number": 103,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2181,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0104",
+          "physical_page_number": 104,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2935,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0105",
+          "physical_page_number": 105,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1347,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0106",
+          "physical_page_number": 106,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1965,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0107",
+          "physical_page_number": 107,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2256,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0108",
+          "physical_page_number": 108,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1737,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0109",
+          "physical_page_number": 109,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3009,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0110",
+          "physical_page_number": 110,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3074,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0111",
+          "physical_page_number": 111,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2736,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0112",
+          "physical_page_number": 112,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2419,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0113",
+          "physical_page_number": 113,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2072,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0114",
+          "physical_page_number": 114,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2417,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0115",
+          "physical_page_number": 115,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3078,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0116",
+          "physical_page_number": 116,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2624,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0117",
+          "physical_page_number": 117,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2901,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0118",
+          "physical_page_number": 118,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1871,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0119",
+          "physical_page_number": 119,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3257,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0120",
+          "physical_page_number": 120,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3360,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0121",
+          "physical_page_number": 121,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1931,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0122",
+          "physical_page_number": 122,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1757,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0123",
+          "physical_page_number": 123,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1967,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0124",
+          "physical_page_number": 124,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2414,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0125",
+          "physical_page_number": 125,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3159,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0126",
+          "physical_page_number": 126,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2303,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0127",
+          "physical_page_number": 127,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2556,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0128",
+          "physical_page_number": 128,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2615,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0129",
+          "physical_page_number": 129,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 4147,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0130",
+          "physical_page_number": 130,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3011,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0131",
+          "physical_page_number": 131,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1669,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0132",
+          "physical_page_number": 132,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3660,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0133",
+          "physical_page_number": 133,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3792,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0134",
+          "physical_page_number": 134,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3877,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0135",
+          "physical_page_number": 135,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2813,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0136",
+          "physical_page_number": 136,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3177,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0137",
+          "physical_page_number": 137,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3046,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0138",
+          "physical_page_number": 138,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3581,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0139",
+          "physical_page_number": 139,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3710,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0140",
+          "physical_page_number": 140,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1898,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0141",
+          "physical_page_number": 141,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2145,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0142",
+          "physical_page_number": 142,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2305,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0143",
+          "physical_page_number": 143,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2287,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0144",
+          "physical_page_number": 144,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2660,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0145",
+          "physical_page_number": 145,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 4097,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0146",
+          "physical_page_number": 146,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 4365,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0147",
+          "physical_page_number": 147,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 3436,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0148",
+          "physical_page_number": 148,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 2766,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0149",
+          "physical_page_number": 149,
+          "chapter": "Chapter 5. Data Definition",
+          "char_count": 1151,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0154",
+          "physical_page_number": 154,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2474,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0155",
+          "physical_page_number": 155,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2711,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0156",
+          "physical_page_number": 156,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2794,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0157",
+          "physical_page_number": 157,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1283,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0158",
+          "physical_page_number": 158,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1211,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0159",
+          "physical_page_number": 159,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1972,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0160",
+          "physical_page_number": 160,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2558,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0161",
+          "physical_page_number": 161,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2407,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0162",
+          "physical_page_number": 162,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2311,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0163",
+          "physical_page_number": 163,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2230,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0164",
+          "physical_page_number": 164,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1973,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0165",
+          "physical_page_number": 165,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1901,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0166",
+          "physical_page_number": 166,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2378,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0167",
+          "physical_page_number": 167,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1778,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0168",
+          "physical_page_number": 168,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1165,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0169",
+          "physical_page_number": 169,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1119,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0170",
+          "physical_page_number": 170,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 3013,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0171",
+          "physical_page_number": 171,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2194,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0172",
+          "physical_page_number": 172,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2463,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0173",
+          "physical_page_number": 173,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2624,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0174",
+          "physical_page_number": 174,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2765,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0175",
+          "physical_page_number": 175,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2163,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0176",
+          "physical_page_number": 176,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2102,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0177",
+          "physical_page_number": 177,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2205,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0178",
+          "physical_page_number": 178,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1721,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0179",
+          "physical_page_number": 179,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2317,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0180",
+          "physical_page_number": 180,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 1909,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0181",
+          "physical_page_number": 181,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 3093,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0182",
+          "physical_page_number": 182,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2109,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0183",
+          "physical_page_number": 183,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 2511,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        },
+        {
+          "page_id": "pg17_p0184",
+          "physical_page_number": 184,
+          "chapter": "Chapter 7. Queries",
+          "char_count": 850,
+          "content_audit": "Native text present; page belongs to an in-scope chapter and exceeds the character threshold. AI-assisted text audit; not a visual human inspection."
+        }
+      ]
+    }
+  ]
+}

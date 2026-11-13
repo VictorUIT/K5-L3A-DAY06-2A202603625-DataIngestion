@@ -1,0 +1,231 @@
+{
+  "benchmark_version": "1.0",
+  "corpus_source_id": "pg17_sql_ddl_queries",
+  "frozen_before_final_run": true,
+  "questions": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "type": "direct",
+      "question": "According to PostgreSQL 17 Chapter 5, what does the chapter explain how to create in order to hold data?",
+      "expected_answer": "Database structures that hold data, primarily tables.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 97,
+      "evidence_quote": "This chapter covers how one creates the database structures that will hold one's data.",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "type": "direct",
+      "question": "When a new row omits values for some columns, what happens to those columns?",
+      "expected_answer": "They are filled with their respective default values.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 98,
+      "evidence_quote": "When a new row is created and no values are specified for some of the columns, those columns will be filled with their respective default values."
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "How does an identity column generate key values?",
+      "expected_answer": "It is generated automatically from an implicit sequence.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 99,
+      "evidence_quote": "An identity column is a special column that is generated automatically from an implicit sequence. It can be used to generate key values."
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "type": "direct",
+      "question": "What data is a generated column computed from?",
+      "expected_answer": "It is always computed from other columns.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 100,
+      "evidence_quote": "A generated column is a special column that is always computed from other columns."
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "type": "direct",
+      "question": "What kind of condition can a CHECK constraint impose on a column value?",
+      "expected_answer": "The value must satisfy a Boolean expression.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 102,
+      "evidence_quote": "It allows you to specify that the value in a certain column must satisfy a Boolean (truth-value) expression."
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "type": "direct",
+      "question": "When a primary key is added, what index is created and what additional condition is imposed on the key columns?",
+      "expected_answer": "A unique B-tree index is created and the key columns are marked NOT NULL.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 107,
+      "evidence_quote": "Adding a primary key will automatically create a unique B-tree index on the column or group of columns listed in the primary key, and will force the column(s) to be marked NOT NULL."
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "type": "direct",
+      "question": "How can a foreign key reference a group of columns?",
+      "expected_answer": "Write it as a table constraint specifying the referencing and referenced column groups.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 108,
+      "evidence_quote": "A foreign key can also constrain and reference a group of columns. As usual, it then needs to be written in table constraint form."
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "type": "conditional",
+      "question": "In the Chapter 5 example, which foreign-key clause cascades a tenant deletion to referencing rows?",
+      "expected_answer": "Use ON DELETE CASCADE.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 110,
+      "evidence_quote": "tenant_id integer REFERENCES tenants ON DELETE CASCADE",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "type": "direct",
+      "question": "When adding a column without specifying DEFAULT, what initial value is used?",
+      "expected_answer": "NULL.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 112,
+      "evidence_quote": "The new column is initially filled with whatever default value is given (null if you don't specify a DEFAULT clause)."
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "type": "conditional",
+      "question": "When a column is removed, what happens to its data and the table constraints involving it?",
+      "expected_answer": "The column's data disappears and constraints involving it are dropped.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 113,
+      "evidence_quote": "Whatever data was in the column disappears. Table constraints involving the column are dropped, too."
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "type": "conditional",
+      "question": "Does ALTER COLUMN ... SET DEFAULT change existing rows or only affect future INSERT commands?",
+      "expected_answer": "It does not affect existing rows; it changes the default for future INSERT commands.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 114,
+      "evidence_quote": "Note that this doesn't affect any existing rows in the table, it just changes the default for future INSERT commands."
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "type": "direct",
+      "question": "Which SQL statement shown grants SELECT on mytable to PUBLIC?",
+      "expected_answer": "GRANT SELECT ON mytable TO PUBLIC;",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 119,
+      "evidence_quote": "GRANT SELECT ON mytable TO PUBLIC;"
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "type": "direct",
+      "question": "Besides tables, what named objects can a PostgreSQL schema contain?",
+      "expected_answer": "It can contain data types, functions, and operators, among other named objects.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 126,
+      "evidence_quote": "Schemas also contain other kinds of named objects, including data types, functions, and operators."
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "type": "direct",
+      "question": "According to Chapter 7, how does the FROM clause derive the table used as query input?",
+      "expected_answer": "From one or more table references in a comma-separated list.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 155,
+      "evidence_quote": "The FROM clause derives a table from one or more other tables given in a comma-separated table reference list.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "Which rows does GROUP BY combine into the same group?",
+      "expected_answer": "Rows with the same values in all listed columns.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 165,
+      "evidence_quote": "The GROUP BY clause is used to group together those rows in a table that have the same values in all the columns listed."
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "type": "direct",
+      "question": "According to Chapter 5, what does the manual recommend for most columns in typical database designs?",
+      "expected_answer": "Mark most columns NOT NULL.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 105,
+      "evidence_quote": "In most database designs the majority of columns should be marked not null.",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "type": "paraphrase",
+      "question": "According to Chapter 5, what does the TRIGGER privilege allow?",
+      "expected_answer": "It allows creation of a trigger on a table, view, or other listed relation.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 116,
+      "evidence_quote": "TRIGGER Allows creation of a trigger on a table, view, etc.",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "type": "conditional",
+      "question": "According to Chapter 5, if pg_catalog is not named explicitly in the search path, when is it searched?",
+      "expected_answer": "It is implicitly searched before the schemas named in the path.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 129,
+      "evidence_quote": "If it is not named explicitly in the path then it is implicitly searched before searching the path's schemas.",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "type": "conditional",
+      "question": "In Chapter 7, what result shape does the documented three-row VALUES example return?",
+      "expected_answer": "A table with two columns and three rows.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 175,
+      "evidence_quote": "will return a table of two columns and three rows.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "type": "direct",
+      "question": "According to Chapter 7, are recursive WITH queries evaluated recursively or iteratively internally?",
+      "expected_answer": "They are evaluated iteratively internally.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 177,
+      "evidence_quote": "internally such queries are evaluated iteratively.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    }
+  ]
+}

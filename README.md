@@ -1,5 +1,11 @@
 # Day 06 · Data Ingestion Engineering
 
+> **Bài làm của 2A202603625 — Trần Quốc Tuấn Khanh.**
+> Cách setup và chạy: [starter/README.md](starter/README.md).
+> Báo cáo: [report/individual/2A202603625_TranQuocTuanKhanh.md](report/individual/2A202603625_TranQuocTuanKhanh.md).
+> Manifest corpus: [manifest.json](manifest.json). Benchmark: [starter/benchmark/questions.json](starter/benchmark/questions.json).
+> Experiment log: [artifacts/experiment_log.csv](artifacts/experiment_log.csv). Kết quả, trace và nhãn: [starter/outputs/](starter/outputs/).
+
 **Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
 
 Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.

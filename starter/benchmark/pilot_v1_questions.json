@@ -1,0 +1,228 @@
+{
+  "benchmark_version": "1.0",
+  "corpus_source_id": "pg17_sql_ddl_queries",
+  "frozen_before_final_run": true,
+  "questions": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "type": "direct",
+      "question": "Theo Chapter 5 của PostgreSQL 17, chương này tập trung giải thích việc tạo ra những gì để lưu trữ dữ liệu?",
+      "expected_answer": "Các cấu trúc cơ sở dữ liệu để lưu trữ dữ liệu, chủ yếu là bảng.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 97,
+      "evidence_quote": "This chapter covers how one creates the database structures that will hold one's data.",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "type": "direct",
+      "question": "Nếu một hàng mới không cung cấp giá trị cho một số cột, giá trị mặc định được dùng như thế nào?",
+      "expected_answer": "Các cột không được cung cấp giá trị sẽ nhận giá trị mặc định tương ứng.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 98,
+      "evidence_quote": "When a new row is created and no values are specified for some of the columns, those columns will be filled with their respective default values."
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "Identity column tạo giá trị khóa theo cơ chế nào?",
+      "expected_answer": "Nó được tạo tự động từ một sequence ngầm định.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 99,
+      "evidence_quote": "An identity column is a special column that is generated automatically from an implicit sequence. It can be used to generate key values."
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "type": "direct",
+      "question": "Generated column được tính từ dữ liệu nào?",
+      "expected_answer": "Nó luôn được tính từ các cột khác.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 100,
+      "evidence_quote": "A generated column is a special column that is always computed from other columns."
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "type": "direct",
+      "question": "CHECK constraint cho phép áp đặt loại điều kiện nào lên giá trị cột?",
+      "expected_answer": "Giá trị phải thỏa một biểu thức Boolean.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 102,
+      "evidence_quote": "It allows you to specify that the value in a certain column must satisfy a Boolean (truth-value) expression."
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "type": "direct",
+      "question": "Khi thêm primary key, PostgreSQL tạo chỉ mục gì và áp đặt thêm điều kiện nào lên các cột khóa?",
+      "expected_answer": "Tạo unique B-tree index và buộc các cột khóa được đánh dấu NOT NULL.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 107,
+      "evidence_quote": "Adding a primary key will automatically create a unique B-tree index on the column or group of columns listed in the primary key, and will force the column(s) to be marked NOT NULL."
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "type": "direct",
+      "question": "Có thể khai báo foreign key tham chiếu đồng thời một nhóm cột như thế nào?",
+      "expected_answer": "Viết foreign key ở dạng table constraint, nêu nhóm cột nguồn và nhóm cột được tham chiếu.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 108,
+      "evidence_quote": "A foreign key can also constrain and reference a group of columns. As usual, it then needs to be written in table constraint form."
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "type": "conditional",
+      "question": "Trong ví dụ Chapter 5, muốn xóa các hàng tham chiếu khi hàng tenant bị xóa thì khai báo clause nào trên foreign key?",
+      "expected_answer": "Dùng ON DELETE CASCADE.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 110,
+      "evidence_quote": "tenant_id integer REFERENCES tenants ON DELETE CASCADE",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "type": "direct",
+      "question": "Khi thêm cột mà không chỉ định DEFAULT, giá trị ban đầu của cột mới là gì?",
+      "expected_answer": "NULL.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 112,
+      "evidence_quote": "The new column is initially filled with whatever default value is given (null if you don't specify a DEFAULT clause)."
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "type": "conditional",
+      "question": "Theo hướng dẫn xóa cột, điều gì xảy ra với dữ liệu trong cột và table constraints liên quan?",
+      "expected_answer": "Dữ liệu trong cột bị mất và các table constraints liên quan cũng bị xóa.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 113,
+      "evidence_quote": "Whatever data was in the column disappears. Table constraints involving the column are dropped, too."
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "type": "conditional",
+      "question": "ALTER COLUMN ... SET DEFAULT tác động đến các hàng đã tồn tại hay chỉ các lệnh INSERT về sau?",
+      "expected_answer": "Không đổi hàng đã tồn tại; mặc định mới áp dụng cho INSERT về sau.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 114,
+      "evidence_quote": "Note that this doesn't affect any existing rows in the table, it just changes the default for future INSERT commands."
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "type": "direct",
+      "question": "Câu lệnh nào trong tài liệu cấp SELECT trên mytable cho PUBLIC?",
+      "expected_answer": "GRANT SELECT ON mytable TO PUBLIC;",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 119,
+      "evidence_quote": "GRANT SELECT ON mytable TO PUBLIC;"
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "type": "direct",
+      "question": "Trong PostgreSQL, schema chứa những loại đối tượng nào ngoài bảng?",
+      "expected_answer": "Schema còn có thể chứa kiểu dữ liệu, hàm và toán tử cùng các đối tượng có tên khác.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 126,
+      "evidence_quote": "Schemas also contain other kinds of named objects, including data types, functions, and operators."
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "type": "direct",
+      "question": "Theo Chapter 7, FROM clause tạo bảng đầu vào cho truy vấn từ đâu?",
+      "expected_answer": "Từ một hoặc nhiều bảng/đối tượng được nêu trong danh sách table reference phân cách bằng dấu phẩy.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 155,
+      "evidence_quote": "The FROM clause derives a table from one or more other tables given in a comma-separated table reference list.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "GROUP BY kết hợp các hàng dựa trên đặc điểm nào?",
+      "expected_answer": "Các hàng có cùng giá trị ở tất cả các cột được liệt kê trong GROUP BY được gom thành một nhóm.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 165,
+      "evidence_quote": "The GROUP BY clause is used to group together those rows in a table that have the same values in all the columns listed."
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "type": "direct",
+      "question": "Theo Chapter 5, lệnh nào trong ví dụ xóa schema myschema cùng các đối tượng phụ thuộc?",
+      "expected_answer": "DROP SCHEMA myschema CASCADE;",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 127,
+      "evidence_quote": "DROP SCHEMA myschema CASCADE;",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "type": "paraphrase",
+      "question": "Theo Chapter 7, khi hai phía của join có cột cùng tên, USING viết điều kiện join theo cách nào?",
+      "expected_answer": "USING nhận danh sách cột chung và tạo điều kiện join có phép so sánh bằng giữa các cột đó.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 156,
+      "evidence_quote": "The USING clause is a shorthand that allows you to take advantage of the specific situation where both sides of the join use the same name for the joining column(s).",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "type": "conditional",
+      "question": "Trong Chapter 7, khi đã GROUP BY nhưng chỉ muốn giữ một số nhóm, clause nào có thể loại các nhóm khỏi kết quả?",
+      "expected_answer": "HAVING, với biểu thức Boolean để loại nhóm không thỏa điều kiện.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 166,
+      "evidence_quote": "the HAVING clause can be used, much like a WHERE clause, to eliminate groups from the result.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "type": "conditional",
+      "question": "Theo Chapter 7, nếu không chỉ định sắp xếp cho kết quả truy vấn thì thứ tự hàng có được đảm bảo không?",
+      "expected_answer": "Không; hàng được trả về theo thứ tự không xác định.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 173,
+      "evidence_quote": "If sorting is not chosen, the rows will be returned in an unspecified order.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "type": "direct",
+      "question": "LIMIT và OFFSET cho phép truy vấn lấy phần nào của kết quả?",
+      "expected_answer": "Chỉ một phần của các hàng do phần còn lại của truy vấn tạo ra.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 174,
+      "evidence_quote": "LIMIT and OFFSET allow you to retrieve just a portion of the rows that are generated by the rest of the query:"
+    }
+  ]
+}

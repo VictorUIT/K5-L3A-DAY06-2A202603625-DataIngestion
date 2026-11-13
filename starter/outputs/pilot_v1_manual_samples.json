@@ -1,0 +1,1255 @@
+[
+  {
+    "question_id": "q16",
+    "split": "test",
+    "strategy": "A_fixed",
+    "question": "Theo Chapter 5, lệnh nào trong ví dụ xóa schema myschema cùng các đối tượng phụ thuộc?",
+    "expected_answer": "DROP SCHEMA myschema CASCADE;",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 127,
+    "evidence_quote": "DROP SCHEMA myschema CASCADE;",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p128_fixed_0",
+        "score": 0.29096476489515566,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 128,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "char_end": 1000,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1000,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 128
+        },
+        "matched_gold": false,
+        "text": "Data Definition\nThe first element specifies that a schema with the same name as the current user is to be searched.\nIf no such schema exists, the entry is ignored. The second element refers to the public schema that\nwe have seen already.\nThe first schema in the search path that exists is the default location for creating new objects. That\nis the reason that by default objects are created in the public schema. When objects are referenced\nin any other context without schema qualification (table modification, data modification, or query\ncommands) the search path is traversed until a matching object is found. Therefore, in the default\nconfiguration, any unqualified access again can only refer to the public schema.\nTo put our new schema in the path, we use:\nSET search_path TO myschema,public;\n(We omit the $user here because we have no immediate need for it.) And then we can access the\ntable without schema qualification:\nDROP TABLE mytable;\nAlso, since myschema is the first element in the pa",
+        "text_preview": "Data Definition\nThe first element specifies that a schema with the same name as the current user is to be searched.\nIf no such schema exists, the entry is ignor"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p126_fixed_1",
+        "score": 0.22913167129377465,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 126,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "char_end": 1850,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1000,
+          "char_start": 850,
+          "chunk_index": 1,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 126
+        },
+        "matched_gold": false,
+        "text": "e schemas:\n• To allow many users to use one database without interfering with each other.\n• To organize database objects into logical groups to make them more manageable.\n• Third-party applications can be put into separate schemas so they do not collide with the names\nof other objects.\nSchemas are analogous to directories at the operating system level, except that schemas cannot be\nnested.\n5.10.1. Creating a Schema\nTo create a schema, use the CREATE SCHEMA command. Give the schema a name of your choice.\nFor example:\nCREATE SCHEMA myschema;\nTo create or access objects in a schema, write a qualified name consisting of the schema name and\ntable name separated by a dot:\nschema.table\nThis works anywhere a table name is expected, including the table modification commands and the\ndata access commands discussed in the following chapters. (For brevity we will speak of tables only,\nbut the same ideas apply to other kinds of named objects, such as types and functions.)\nActually, the even more gen",
+        "text_preview": "e schemas:\n• To allow many users to use one database without interfering with each other.\n• To organize database objects into logical groups to make them more m"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_sql_ddl_queries_p117_fixed_3",
+        "score": 0.22521512358098528,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 117,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "char_end": 2901,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 351,
+          "char_start": 2550,
+          "chunk_index": 3,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 117
+        },
+        "matched_gold": false,
+        "text": "1. ACL Privilege Abbreviations\nPrivilege Abbreviation Applicable Object Types\nSELECT r (“read”) LARGE OBJECT, SEQUENCE, TABLE (and\ntable-like objects), table column\nINSERT a (“append”) TABLE, table column\nUPDATE w (“write”) LARGE OBJECT, SEQUENCE, TABLE, table\ncolumn\nDELETE d TABLE\nTRUNCATE D TABLE\nREFERENCES x TABLE, table column\nTRIGGER t TABLE\n79",
+        "text_preview": "1. ACL Privilege Abbreviations\nPrivilege Abbreviation Applicable Object Types\nSELECT r (“read”) LARGE OBJECT, SEQUENCE, TABLE (and\ntable-like objects), table co"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q16",
+    "split": "test",
+    "strategy": "B_paragraph",
+    "question": "Theo Chapter 5, lệnh nào trong ví dụ xóa schema myschema cùng các đối tượng phụ thuộc?",
+    "expected_answer": "DROP SCHEMA myschema CASCADE;",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 127,
+    "evidence_quote": "DROP SCHEMA myschema CASCADE;",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p128_para_0",
+        "score": 0.27235668631116317,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 128,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1190,
+          "chunk_index": 0,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 128
+        },
+        "matched_gold": false,
+        "text": "Data Definition The first element specifies that a schema with the same name as the current user is to be searched. If no such schema exists, the entry is ignored. The second element refers to the public schema that we have seen already. The first schema in the search path that exists is the default location for creating new objects. That is the reason that by default objects are created in the public schema. When objects are referenced in any other context without schema qualification (table modification, data modification, or query commands) the search path is traversed until a matching object is found. Therefore, in the default configuration, any unqualified access again can only refer to the public schema. To put our new schema in the path, we use: SET search_path TO myschema,public; (We omit the $user here because we have no immediate need for it.) And then we can access the table without schema qualification: DROP TABLE mytable; Also, since myschema is the first element in the path, new objects would by default be created in it. We could also have written: SET search_path TO myschema; Then we no longer have access to the public schema without explicit qualification.",
+        "text_preview": "Data Definition The first element specifies that a schema with the same name as the current user is to be searched. If no such schema exists, the entry is ignor"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p127_para_2",
+        "score": 0.2666362365105016,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 127,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 198,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 127
+        },
+        "matched_gold": false,
+        "text": "command does not specify a schema name. To show the current search path, use the following command: SHOW search_path; In the default setup this returns: search_path -------------- \"$user\", public 89",
+        "text_preview": "command does not specify a schema name. To show the current search path, use the following command: SHOW search_path; In the default setup this returns: search_"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_sql_ddl_queries_p114_para_2",
+        "score": 0.24072198680377166,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 114,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 27,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 114
+        },
+        "matched_gold": false,
+        "text": "role; see Section 21.3.) 76",
+        "text_preview": "role; see Section 21.3.) 76"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q16",
+    "split": "test",
+    "strategy": "C_paragraph_filtered",
+    "question": "Theo Chapter 5, lệnh nào trong ví dụ xóa schema myschema cùng các đối tượng phụ thuộc?",
+    "expected_answer": "DROP SCHEMA myschema CASCADE;",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 127,
+    "evidence_quote": "DROP SCHEMA myschema CASCADE;",
+    "filters_used": {
+      "chapter": "Chapter 5. Data Definition"
+    },
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p128_para_0",
+        "score": 0.27235668631116317,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 128,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1190,
+          "chunk_index": 0,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 128
+        },
+        "matched_gold": false,
+        "text": "Data Definition The first element specifies that a schema with the same name as the current user is to be searched. If no such schema exists, the entry is ignored. The second element refers to the public schema that we have seen already. The first schema in the search path that exists is the default location for creating new objects. That is the reason that by default objects are created in the public schema. When objects are referenced in any other context without schema qualification (table modification, data modification, or query commands) the search path is traversed until a matching object is found. Therefore, in the default configuration, any unqualified access again can only refer to the public schema. To put our new schema in the path, we use: SET search_path TO myschema,public; (We omit the $user here because we have no immediate need for it.) And then we can access the table without schema qualification: DROP TABLE mytable; Also, since myschema is the first element in the path, new objects would by default be created in it. We could also have written: SET search_path TO myschema; Then we no longer have access to the public schema without explicit qualification.",
+        "text_preview": "Data Definition The first element specifies that a schema with the same name as the current user is to be searched. If no such schema exists, the entry is ignor"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p127_para_2",
+        "score": 0.2666362365105016,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 127,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 198,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 127
+        },
+        "matched_gold": false,
+        "text": "command does not specify a schema name. To show the current search path, use the following command: SHOW search_path; In the default setup this returns: search_path -------------- \"$user\", public 89",
+        "text_preview": "command does not specify a schema name. To show the current search path, use the following command: SHOW search_path; In the default setup this returns: search_"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_sql_ddl_queries_p114_para_2",
+        "score": 0.24072198680377166,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 114,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 27,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 114
+        },
+        "matched_gold": false,
+        "text": "role; see Section 21.3.) 76",
+        "text_preview": "role; see Section 21.3.) 76"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q17",
+    "split": "test",
+    "strategy": "A_fixed",
+    "question": "Theo Chapter 7, khi hai phía của join có cột cùng tên, USING viết điều kiện join theo cách nào?",
+    "expected_answer": "USING nhận danh sách cột chung và tạo điều kiện join có phép so sánh bằng giữa các cột đó.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 156,
+    "evidence_quote": "The USING clause is a shorthand that allows you to take advantage of the specific situation where both sides of the join use the same name for the joining column(s).",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p155_fixed_3",
+        "score": 0.31483471393585205,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 155,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "char_end": 2711,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 161,
+          "char_start": 2550,
+          "chunk_index": 3,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 155
+        },
+        "matched_gold": false,
+        "text": "es appear, because\nJOIN binds more tightly than comma. For example FROM T1 CROSS JOIN T2\nINNER JOIN T3 ON condition is not the same as FROM T1, T2 INNER JOIN\n117",
+        "text_preview": "es appear, because\nJOIN binds more tightly than comma. For example FROM T1 CROSS JOIN T2\nINNER JOIN T3 ON condition is not the same as FROM T1, T2 INNER JOIN\n11"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_doc_sql_p155_fixed_3",
+        "score": 0.31483471393585205,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 155,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "char_end": 2711,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 161,
+          "char_start": 2550,
+          "chunk_index": 3,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 155
+        },
+        "matched_gold": false,
+        "text": "es appear, because\nJOIN binds more tightly than comma. For example FROM T1 CROSS JOIN T2\nINNER JOIN T3 ON condition is not the same as FROM T1, T2 INNER JOIN\n117",
+        "text_preview": "es appear, because\nJOIN binds more tightly than comma. For example FROM T1 CROSS JOIN T2\nINNER JOIN T3 ON condition is not the same as FROM T1, T2 INNER JOIN\n11"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_doc_sql_p156_fixed_3",
+        "score": 0.2333682636399116,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 156,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "char_end": 2794,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 244,
+          "char_start": 2550,
+          "chunk_index": 3,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 156
+        },
+        "matched_gold": false,
+        "text": "uces all\ncolumns from T1 followed by all columns from T2, JOIN USING produces one output column\nfor each of the listed column pairs (in the listed order), followed by any remaining columns from\nT1, followed by any remaining columns from T2.\n118",
+        "text_preview": "uces all\ncolumns from T1 followed by all columns from T2, JOIN USING produces one output column\nfor each of the listed column pairs (in the listed order), follo"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q17",
+    "split": "test",
+    "strategy": "B_paragraph",
+    "question": "Theo Chapter 7, khi hai phía của join có cột cùng tên, USING viết điều kiện join theo cách nào?",
+    "expected_answer": "USING nhận danh sách cột chung và tạo điều kiện join có phép so sánh bằng giữa các cột đó.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 156,
+    "evidence_quote": "The USING clause is a shorthand that allows you to take advantage of the specific situation where both sides of the join use the same name for the joining column(s).",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p114_para_2",
+        "score": 0.2659680684823954,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 114,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 27,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 114
+        },
+        "matched_gold": false,
+        "text": "role; see Section 21.3.) 76",
+        "text_preview": "role; see Section 21.3.) 76"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p155_para_2",
+        "score": 0.2550364808749105,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 155,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 433,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 155
+        },
+        "matched_gold": false,
+        "text": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). It is also equivalent to FROM T1, T2. Note This latter equivalence does not hold exactly when more than two tables appear, because JOIN binds more tightly than comma. For example FROM T1 CROSS JOIN T2 INNER JOIN T3 ON condition is not the same as FROM T1, T2 INNER JOIN 117",
+        "text_preview": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). "
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_doc_sql_p155_para_2",
+        "score": 0.25503647267383844,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 155,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 433,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 155
+        },
+        "matched_gold": false,
+        "text": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). It is also equivalent to FROM T1, T2. Note This latter equivalence does not hold exactly when more than two tables appear, because JOIN binds more tightly than comma. For example FROM T1 CROSS JOIN T2 INNER JOIN T3 ON condition is not the same as FROM T1, T2 INNER JOIN 117",
+        "text_preview": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). "
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q17",
+    "split": "test",
+    "strategy": "C_paragraph_filtered",
+    "question": "Theo Chapter 7, khi hai phía của join có cột cùng tên, USING viết điều kiện join theo cách nào?",
+    "expected_answer": "USING nhận danh sách cột chung và tạo điều kiện join có phép so sánh bằng giữa các cột đó.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 156,
+    "evidence_quote": "The USING clause is a shorthand that allows you to take advantage of the specific situation where both sides of the join use the same name for the joining column(s).",
+    "filters_used": {
+      "chapter": "Chapter 7. Queries"
+    },
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p155_para_2",
+        "score": 0.2550364808749105,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 155,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 433,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 155
+        },
+        "matched_gold": false,
+        "text": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). It is also equivalent to FROM T1, T2. Note This latter equivalence does not hold exactly when more than two tables appear, because JOIN binds more tightly than comma. For example FROM T1 CROSS JOIN T2 INNER JOIN T3 ON condition is not the same as FROM T1, T2 INNER JOIN 117",
+        "text_preview": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). "
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_doc_sql_p155_para_2",
+        "score": 0.25503647267383844,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 155,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 433,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 155
+        },
+        "matched_gold": false,
+        "text": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). It is also equivalent to FROM T1, T2. Note This latter equivalence does not hold exactly when more than two tables appear, because JOIN binds more tightly than comma. For example FROM T1 CROSS JOIN T2 INNER JOIN T3 ON condition is not the same as FROM T1, T2 INNER JOIN 117",
+        "text_preview": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). "
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_doc_sql_p157_para_1",
+        "score": 0.22863905259138073,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 157,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 102,
+          "chunk_index": 1,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 157
+        },
+        "matched_gold": false,
+        "text": "=> SELECT * FROM t1 INNER JOIN t2 USING (num); num | name | value -----+------+------- 1 | a | xxx 119",
+        "text_preview": "=> SELECT * FROM t1 INNER JOIN t2 USING (num); num | name | value -----+------+------- 1 | a | xxx 119"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q18",
+    "split": "test",
+    "strategy": "A_fixed",
+    "question": "Trong Chapter 7, khi đã GROUP BY nhưng chỉ muốn giữ một số nhóm, clause nào có thể loại các nhóm khỏi kết quả?",
+    "expected_answer": "HAVING, với biểu thức Boolean để loại nhóm không thỏa điều kiện.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 166,
+    "evidence_quote": "the HAVING clause can be used, much like a WHERE clause, to eliminate groups from the result.",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p121_fixed_1",
+        "score": 0.25839494118720685,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 121,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "char_end": 1850,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1000,
+          "char_start": 850,
+          "chunk_index": 1,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 121
+        },
+        "matched_gold": false,
+        "text": "ext UNIQUE NOT NULL,\npwhash text,\nuid int PRIMARY KEY,\ngid int NOT NULL,\nreal_name text NOT NULL,\nhome_phone text,\nextra_info text,\nhome_dir text NOT NULL,\nshell text NOT NULL\n);\nCREATE ROLE admin; -- Administrator\nCREATE ROLE bob; -- Normal user\nCREATE ROLE alice; -- Normal user\n-- Populate the table\nINSERT INTO passwd VALUES\n('admin','xxx',0,0,'Admin','111-222-3333',null,'/root','/bin/\ndash');\nINSERT INTO passwd VALUES\n('bob','xxx',1,1,'Bob','123-456-7890',null,'/home/bob','/bin/\nzsh');\nINSERT INTO passwd VALUES\n('alice','xxx',2,1,'Alice','098-765-4321',null,'/home/alice','/\nbin/zsh');\n-- Be sure to enable row-level security on the table\nALTER TABLE passwd ENABLE ROW LEVEL SECURITY;\n-- Create policies\n-- Administrator can see all rows and add any rows\nCREATE POLICY admin_all ON passwd TO admin USING (true) WITH CHECK\n(true);\n-- Normal users can view all rows\nCREATE POLICY all_view ON passwd FOR SELECT USING (true);\n-- Normal users can update their own records, but\n-- limit which shel",
+        "text_preview": "ext UNIQUE NOT NULL,\npwhash text,\nuid int PRIMARY KEY,\ngid int NOT NULL,\nreal_name text NOT NULL,\nhome_phone text,\nextra_info text,\nhome_dir text NOT NULL,\nshel"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p123_fixed_2",
+        "score": 0.2373209908818017,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 123,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "char_end": 1967,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 267,
+          "char_start": 1700,
+          "chunk_index": 2,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 123
+        },
+        "matched_gold": false,
+        "text": ".0.0.1\n(1 row)\n=> TABLE passwd;\nuser_name | pwhash | uid | gid | real_name | home_phone |\nextra_info | home_dir | shell\n-----------+--------+-----+-----+-----------+------------\n+------------+----------+-------\n(0 rows)\n=> UPDATE passwd set pwhash = NULL;\nUPDATE 0\n85",
+        "text_preview": ".0.0.1\n(1 row)\n=> TABLE passwd;\nuser_name | pwhash | uid | gid | real_name | home_phone |\nextra_info | home_dir | shell\n-----------+--------+-----+-----+-------"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_doc_sql_p180_fixed_2",
+        "score": 0.2262100144499536,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 180,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "char_end": 1909,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 208,
+          "char_start": 1700,
+          "chunk_index": 2,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 180
+        },
+        "matched_gold": false,
+        "text": "rows of the CTE.\nTip\nThe cycle path column is computed in the same way as the depth-first ordering column show in\nthe previous section. A query can have both a SEARCH and a CYCLE clause, but a depth-first\n142",
+        "text_preview": "rows of the CTE.\nTip\nThe cycle path column is computed in the same way as the depth-first ordering column show in\nthe previous section. A query can have both a "
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q18",
+    "split": "test",
+    "strategy": "B_paragraph",
+    "question": "Trong Chapter 7, khi đã GROUP BY nhưng chỉ muốn giữ một số nhóm, clause nào có thể loại các nhóm khỏi kết quả?",
+    "expected_answer": "HAVING, với biểu thức Boolean để loại nhóm không thỏa điều kiện.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 166,
+    "evidence_quote": "the HAVING clause can be used, much like a WHERE clause, to eliminate groups from the result.",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_doc_sql_p154_para_2",
+        "score": 0.2889236039564851,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 154,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 94,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 154
+        },
+        "matched_gold": false,
+        "text": "of successive transformations performed on the table derived in the FROM clause. All these 116",
+        "text_preview": "of successive transformations performed on the table derived in the FROM clause. All these 116"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p154_para_2",
+        "score": 0.2889236039564851,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 154,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 94,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 154
+        },
+        "matched_gold": false,
+        "text": "of successive transformations performed on the table derived in the FROM clause. All these 116",
+        "text_preview": "of successive transformations performed on the table derived in the FROM clause. All these 116"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_sql_ddl_queries_p114_para_2",
+        "score": 0.2803236209960436,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 114,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 27,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 114
+        },
+        "matched_gold": false,
+        "text": "role; see Section 21.3.) 76",
+        "text_preview": "role; see Section 21.3.) 76"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q18",
+    "split": "test",
+    "strategy": "C_paragraph_filtered",
+    "question": "Trong Chapter 7, khi đã GROUP BY nhưng chỉ muốn giữ một số nhóm, clause nào có thể loại các nhóm khỏi kết quả?",
+    "expected_answer": "HAVING, với biểu thức Boolean để loại nhóm không thỏa điều kiện.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 166,
+    "evidence_quote": "the HAVING clause can be used, much like a WHERE clause, to eliminate groups from the result.",
+    "filters_used": {
+      "chapter": "Chapter 7. Queries"
+    },
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p154_para_2",
+        "score": 0.2889236039564851,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 154,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 94,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 154
+        },
+        "matched_gold": false,
+        "text": "of successive transformations performed on the table derived in the FROM clause. All these 116",
+        "text_preview": "of successive transformations performed on the table derived in the FROM clause. All these 116"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_doc_sql_p154_para_2",
+        "score": 0.2889236039564851,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 154,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 94,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 154
+        },
+        "matched_gold": false,
+        "text": "of successive transformations performed on the table derived in the FROM clause. All these 116",
+        "text_preview": "of successive transformations performed on the table derived in the FROM clause. All these 116"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_doc_sql_p166_para_2",
+        "score": 0.27246742628611953,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 166,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 14,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 166
+        },
+        "matched_gold": false,
+        "text": "BY clause. 128",
+        "text_preview": "BY clause. 128"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q19",
+    "split": "test",
+    "strategy": "A_fixed",
+    "question": "Theo Chapter 7, nếu không chỉ định sắp xếp cho kết quả truy vấn thì thứ tự hàng có được đảm bảo không?",
+    "expected_answer": "Không; hàng được trả về theo thứ tự không xác định.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 173,
+    "evidence_quote": "If sorting is not chosen, the rows will be returned in an unspecified order.",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p121_fixed_1",
+        "score": 0.21304975670279558,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 121,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "char_end": 1850,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1000,
+          "char_start": 850,
+          "chunk_index": 1,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 121
+        },
+        "matched_gold": false,
+        "text": "ext UNIQUE NOT NULL,\npwhash text,\nuid int PRIMARY KEY,\ngid int NOT NULL,\nreal_name text NOT NULL,\nhome_phone text,\nextra_info text,\nhome_dir text NOT NULL,\nshell text NOT NULL\n);\nCREATE ROLE admin; -- Administrator\nCREATE ROLE bob; -- Normal user\nCREATE ROLE alice; -- Normal user\n-- Populate the table\nINSERT INTO passwd VALUES\n('admin','xxx',0,0,'Admin','111-222-3333',null,'/root','/bin/\ndash');\nINSERT INTO passwd VALUES\n('bob','xxx',1,1,'Bob','123-456-7890',null,'/home/bob','/bin/\nzsh');\nINSERT INTO passwd VALUES\n('alice','xxx',2,1,'Alice','098-765-4321',null,'/home/alice','/\nbin/zsh');\n-- Be sure to enable row-level security on the table\nALTER TABLE passwd ENABLE ROW LEVEL SECURITY;\n-- Create policies\n-- Administrator can see all rows and add any rows\nCREATE POLICY admin_all ON passwd TO admin USING (true) WITH CHECK\n(true);\n-- Normal users can view all rows\nCREATE POLICY all_view ON passwd FOR SELECT USING (true);\n-- Normal users can update their own records, but\n-- limit which shel",
+        "text_preview": "ext UNIQUE NOT NULL,\npwhash text,\nuid int PRIMARY KEY,\ngid int NOT NULL,\nreal_name text NOT NULL,\nhome_phone text,\nextra_info text,\nhome_dir text NOT NULL,\nshel"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_doc_sql_p194_fixed_1",
+        "score": 0.20249574452689356,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 194,
+        "metadata": {
+          "chapter": "Chapter 8. Data Types",
+          "char_end": 1850,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1000,
+          "char_start": 850,
+          "chunk_index": 1,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 194
+        },
+        "matched_gold": false,
+        "text": "e of its additional storage costs. In\nmost situations text or character varying should be used instead.\nRefer to Section 4.1.2.1 for information about the syntax of string literals, and to Chapter 9 for\ninformation about available operators and functions.\nExample 8.1. Using the Character Types\nCREATE TABLE test1 (a character(4));\nINSERT INTO test1 VALUES ('ok');\nSELECT a, char_length(a) FROM test1; -- 1\na | char_length\n------+-------------\nok | 2\nCREATE TABLE test2 (b varchar(5));\nINSERT INTO test2 VALUES ('ok');\nINSERT INTO test2 VALUES ('good ');\nINSERT INTO test2 VALUES ('too long');\nERROR: value too long for type character varying(5)\nINSERT INTO test2 VALUES ('too long'::varchar(5)); -- explicit\ntruncation\nSELECT b, char_length(b) FROM test2;\nb | char_length\n-------+-------------\nok | 2\ngood | 5\ntoo l | 5\n1 The char_length function is discussed in Section 9.4.\nThere are two other fixed-length character types in PostgreSQL, shown in Table 8.5. These are not\nintended for general-purp",
+        "text_preview": "e of its additional storage costs. In\nmost situations text or character varying should be used instead.\nRefer to Section 4.1.2.1 for information about the synta"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_sql_ddl_queries_p123_fixed_2",
+        "score": 0.2006056516640602,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 123,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "char_end": 1967,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 267,
+          "char_start": 1700,
+          "chunk_index": 2,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 123
+        },
+        "matched_gold": false,
+        "text": ".0.0.1\n(1 row)\n=> TABLE passwd;\nuser_name | pwhash | uid | gid | real_name | home_phone |\nextra_info | home_dir | shell\n-----------+--------+-----+-----+-----------+------------\n+------------+----------+-------\n(0 rows)\n=> UPDATE passwd set pwhash = NULL;\nUPDATE 0\n85",
+        "text_preview": ".0.0.1\n(1 row)\n=> TABLE passwd;\nuser_name | pwhash | uid | gid | real_name | home_phone |\nextra_info | home_dir | shell\n-----------+--------+-----+-----+-------"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q19",
+    "split": "test",
+    "strategy": "B_paragraph",
+    "question": "Theo Chapter 7, nếu không chỉ định sắp xếp cho kết quả truy vấn thì thứ tự hàng có được đảm bảo không?",
+    "expected_answer": "Không; hàng được trả về theo thứ tự không xác định.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 173,
+    "evidence_quote": "If sorting is not chosen, the rows will be returned in an unspecified order.",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_doc_sql_p166_para_2",
+        "score": 0.21874176804000922,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 166,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 14,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 166
+        },
+        "matched_gold": false,
+        "text": "BY clause. 128",
+        "text_preview": "BY clause. 128"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p166_para_2",
+        "score": 0.21874176804000922,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 166,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 14,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 166
+        },
+        "matched_gold": false,
+        "text": "BY clause. 128",
+        "text_preview": "BY clause. 128"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_sql_ddl_queries_p114_para_2",
+        "score": 0.2144381893350853,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 114,
+        "metadata": {
+          "chapter": "Chapter 5. Data Definition",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 27,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 114
+        },
+        "matched_gold": false,
+        "text": "role; see Section 21.3.) 76",
+        "text_preview": "role; see Section 21.3.) 76"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q19",
+    "split": "test",
+    "strategy": "C_paragraph_filtered",
+    "question": "Theo Chapter 7, nếu không chỉ định sắp xếp cho kết quả truy vấn thì thứ tự hàng có được đảm bảo không?",
+    "expected_answer": "Không; hàng được trả về theo thứ tự không xác định.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 173,
+    "evidence_quote": "If sorting is not chosen, the rows will be returned in an unspecified order.",
+    "filters_used": {
+      "chapter": "Chapter 7. Queries"
+    },
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_sql_ddl_queries_p166_para_2",
+        "score": 0.21874176804000922,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 166,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 14,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 166
+        },
+        "matched_gold": false,
+        "text": "BY clause. 128",
+        "text_preview": "BY clause. 128"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_doc_sql_p166_para_2",
+        "score": 0.21874176804000922,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 166,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 14,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 166
+        },
+        "matched_gold": false,
+        "text": "BY clause. 128",
+        "text_preview": "BY clause. 128"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_sql_ddl_queries_p155_para_2",
+        "score": 0.21093659964392864,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 155,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 433,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 155
+        },
+        "matched_gold": false,
+        "text": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). It is also equivalent to FROM T1, T2. Note This latter equivalence does not hold exactly when more than two tables appear, because JOIN binds more tightly than comma. For example FROM T1 CROSS JOIN T2 INNER JOIN T3 ON condition is not the same as FROM T1, T2 INNER JOIN 117",
+        "text_preview": "tables have N and M rows respectively, the joined table will have N * M rows. FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE (see below). "
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q20",
+    "split": "test",
+    "strategy": "A_fixed",
+    "question": "LIMIT và OFFSET cho phép truy vấn lấy phần nào của kết quả?",
+    "expected_answer": "Chỉ một phần của các hàng do phần còn lại của truy vấn tạo ra.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 174,
+    "evidence_quote": "LIMIT and OFFSET allow you to retrieve just a portion of the rows that are generated by the rest of the query:",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_doc_sql_p174_fixed_1",
+        "score": 0.30948587329727917,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 174,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "char_end": 1850,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 999,
+          "char_start": 850,
+          "chunk_index": 1,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 174
+        },
+        "matched_gold": false,
+        "text": "EPT combination, but in\nthis case it is only permitted to sort by output column names or numbers, not by expressions.\n7.6. LIMIT and OFFSET\nLIMIT and OFFSET allow you to retrieve just a portion of the rows that are generated by the rest\nof the query:\nSELECT select_list\nFROM table_expression\n[ ORDER BY ... ]\n[ LIMIT { count | ALL } ]\n[ OFFSET start ]\nIf a limit count is given, no more than that many rows will be returned (but possibly fewer, if the\nquery itself yields fewer rows). LIMIT ALL is the same as omitting the LIMIT clause, as is LIMIT\nwith a NULL argument.\nOFFSET says to skip that many rows before beginning to return rows. OFFSET 0 is the same as\nomitting the OFFSET clause, as is OFFSET with a NULL argument.\nIf both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the\nLIMIT rows that are returned.\nWhen using LIMIT, it is important to use an ORDER BY clause that constrains the result rows into a\nunique order. Otherwise you will get an unpredictable",
+        "text_preview": "EPT combination, but in\nthis case it is only permitted to sort by output column names or numbers, not by expressions.\n7.6. LIMIT and OFFSET\nLIMIT and OFFSET all"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p174_fixed_1",
+        "score": 0.30948587329727917,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 174,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "char_end": 1850,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 999,
+          "char_start": 850,
+          "chunk_index": 1,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 174
+        },
+        "matched_gold": true,
+        "text": "EPT combination, but in\nthis case it is only permitted to sort by output column names or numbers, not by expressions.\n7.6. LIMIT and OFFSET\nLIMIT and OFFSET allow you to retrieve just a portion of the rows that are generated by the rest\nof the query:\nSELECT select_list\nFROM table_expression\n[ ORDER BY ... ]\n[ LIMIT { count | ALL } ]\n[ OFFSET start ]\nIf a limit count is given, no more than that many rows will be returned (but possibly fewer, if the\nquery itself yields fewer rows). LIMIT ALL is the same as omitting the LIMIT clause, as is LIMIT\nwith a NULL argument.\nOFFSET says to skip that many rows before beginning to return rows. OFFSET 0 is the same as\nomitting the OFFSET clause, as is OFFSET with a NULL argument.\nIf both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the\nLIMIT rows that are returned.\nWhen using LIMIT, it is important to use an ORDER BY clause that constrains the result rows into a\nunique order. Otherwise you will get an unpredictable",
+        "text_preview": "EPT combination, but in\nthis case it is only permitted to sort by output column names or numbers, not by expressions.\n7.6. LIMIT and OFFSET\nLIMIT and OFFSET all"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_doc_sql_p174_fixed_3",
+        "score": 0.24695050716400324,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 174,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "char_end": 2765,
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 215,
+          "char_start": 2550,
+          "chunk_index": 3,
+          "chunk_strategy": "fixed_size",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 174
+        },
+        "matched_gold": false,
+        "text": "particular order unless ORDER BY is used to constrain the order.\nThe rows skipped by an OFFSET clause still have to be computed inside the server; therefore a large\nOFFSET might be inefficient.\n7.7. VALUES Lists\n136",
+        "text_preview": "particular order unless ORDER BY is used to constrain the order.\nThe rows skipped by an OFFSET clause still have to be computed inside the server; therefore a l"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q20",
+    "split": "test",
+    "strategy": "B_paragraph",
+    "question": "LIMIT và OFFSET cho phép truy vấn lấy phần nào của kết quả?",
+    "expected_answer": "Chỉ một phần của các hàng do phần còn lại của truy vấn tạo ra.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 174,
+    "evidence_quote": "LIMIT and OFFSET allow you to retrieve just a portion of the rows that are generated by the rest of the query:",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_doc_sql_p174_para_1",
+        "score": 0.2840877859435469,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 174,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1141,
+          "chunk_index": 1,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 174
+        },
+        "matched_gold": false,
+        "text": "[ OFFSET start ] If a limit count is given, no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows). LIMIT ALL is the same as omitting the LIMIT clause, as is LIMIT with a NULL argument. OFFSET says to skip that many rows before beginning to return rows. OFFSET 0 is the same as omitting the OFFSET clause, as is OFFSET with a NULL argument. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned. When using LIMIT, it is important to use an ORDER BY clause that constrains the result rows into a unique order. Otherwise you will get an unpredictable subset of the query's rows. You might be asking for the tenth through twentieth rows, but tenth through twentieth in what ordering? The ordering is unknown, unless you specified ORDER BY. The query optimizer takes LIMIT into account when generating query plans, so you are very likely to get different plans (yielding different row orders) depending on what you give for LIMIT and OFFSET. Thus, using different LIMIT/OFFSET values to select different subsets of a query result",
+        "text_preview": "[ OFFSET start ] If a limit count is given, no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows). LIMIT ALL "
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p174_para_1",
+        "score": 0.2840877859435469,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 174,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1141,
+          "chunk_index": 1,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 174
+        },
+        "matched_gold": false,
+        "text": "[ OFFSET start ] If a limit count is given, no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows). LIMIT ALL is the same as omitting the LIMIT clause, as is LIMIT with a NULL argument. OFFSET says to skip that many rows before beginning to return rows. OFFSET 0 is the same as omitting the OFFSET clause, as is OFFSET with a NULL argument. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned. When using LIMIT, it is important to use an ORDER BY clause that constrains the result rows into a unique order. Otherwise you will get an unpredictable subset of the query's rows. You might be asking for the tenth through twentieth rows, but tenth through twentieth in what ordering? The ordering is unknown, unless you specified ORDER BY. The query optimizer takes LIMIT into account when generating query plans, so you are very likely to get different plans (yielding different row orders) depending on what you give for LIMIT and OFFSET. Thus, using different LIMIT/OFFSET values to select different subsets of a query result",
+        "text_preview": "[ OFFSET start ] If a limit count is given, no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows). LIMIT ALL "
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_doc_sql_p174_para_2",
+        "score": 0.2154249143093927,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 174,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 438,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 174
+        },
+        "matched_gold": false,
+        "text": "will give inconsistent results unless you enforce a predictable result ordering with ORDER BY. This is not a bug; it is an inherent consequence of the fact that SQL does not promise to deliver the results of a query in any particular order unless ORDER BY is used to constrain the order. The rows skipped by an OFFSET clause still have to be computed inside the server; therefore a large OFFSET might be inefficient. 7.7. VALUES Lists 136",
+        "text_preview": "will give inconsistent results unless you enforce a predictable result ordering with ORDER BY. This is not a bug; it is an inherent consequence of the fact that"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  },
+  {
+    "question_id": "q20",
+    "split": "test",
+    "strategy": "C_paragraph_filtered",
+    "question": "LIMIT và OFFSET cho phép truy vấn lấy phần nào của kết quả?",
+    "expected_answer": "Chỉ một phần của các hàng do phần còn lại của truy vấn tạo ra.",
+    "gold_source_id": "pg17_sql_ddl_queries",
+    "gold_page": 174,
+    "evidence_quote": "LIMIT and OFFSET allow you to retrieve just a portion of the rows that are generated by the rest of the query:",
+    "filters_used": null,
+    "retrieved_top_3": [
+      {
+        "rank": 1,
+        "chunk_id": "pg17_doc_sql_p174_para_1",
+        "score": 0.2840877859435469,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 174,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1141,
+          "chunk_index": 1,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 174
+        },
+        "matched_gold": false,
+        "text": "[ OFFSET start ] If a limit count is given, no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows). LIMIT ALL is the same as omitting the LIMIT clause, as is LIMIT with a NULL argument. OFFSET says to skip that many rows before beginning to return rows. OFFSET 0 is the same as omitting the OFFSET clause, as is OFFSET with a NULL argument. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned. When using LIMIT, it is important to use an ORDER BY clause that constrains the result rows into a unique order. Otherwise you will get an unpredictable subset of the query's rows. You might be asking for the tenth through twentieth rows, but tenth through twentieth in what ordering? The ordering is unknown, unless you specified ORDER BY. The query optimizer takes LIMIT into account when generating query plans, so you are very likely to get different plans (yielding different row orders) depending on what you give for LIMIT and OFFSET. Thus, using different LIMIT/OFFSET values to select different subsets of a query result",
+        "text_preview": "[ OFFSET start ] If a limit count is given, no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows). LIMIT ALL "
+      },
+      {
+        "rank": 2,
+        "chunk_id": "pg17_sql_ddl_queries_p174_para_1",
+        "score": 0.2840877859435469,
+        "document_id": "pg17_sql_ddl_queries",
+        "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+        "page": 174,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 1141,
+          "chunk_index": 1,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_sql_ddl_queries",
+          "source": "https://www.postgresql.org/files/documentation/pdf/17/postgresql-17-A4.pdf",
+          "page": 174
+        },
+        "matched_gold": false,
+        "text": "[ OFFSET start ] If a limit count is given, no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows). LIMIT ALL is the same as omitting the LIMIT clause, as is LIMIT with a NULL argument. OFFSET says to skip that many rows before beginning to return rows. OFFSET 0 is the same as omitting the OFFSET clause, as is OFFSET with a NULL argument. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned. When using LIMIT, it is important to use an ORDER BY clause that constrains the result rows into a unique order. Otherwise you will get an unpredictable subset of the query's rows. You might be asking for the tenth through twentieth rows, but tenth through twentieth in what ordering? The ordering is unknown, unless you specified ORDER BY. The query optimizer takes LIMIT into account when generating query plans, so you are very likely to get different plans (yielding different row orders) depending on what you give for LIMIT and OFFSET. Thus, using different LIMIT/OFFSET values to select different subsets of a query result",
+        "text_preview": "[ OFFSET start ] If a limit count is given, no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows). LIMIT ALL "
+      },
+      {
+        "rank": 3,
+        "chunk_id": "pg17_doc_sql_p174_para_2",
+        "score": 0.2154249143093927,
+        "document_id": "pg17_doc_sql",
+        "source": "https://postgresql.org",
+        "page": 174,
+        "metadata": {
+          "chapter": "Chapter 7. Queries",
+          "has_text": true,
+          "needs_ocr": false,
+          "char_count": 438,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "pg17_doc_sql",
+          "source": "https://postgresql.org",
+          "page": 174
+        },
+        "matched_gold": false,
+        "text": "will give inconsistent results unless you enforce a predictable result ordering with ORDER BY. This is not a bug; it is an inherent consequence of the fact that SQL does not promise to deliver the results of a query in any particular order unless ORDER BY is used to constrain the order. The rows skipped by an OFFSET clause still have to be computed inside the server; therefore a large OFFSET might be inefficient. 7.7. VALUES Lists 136",
+        "text_preview": "will give inconsistent results unless you enforce a predictable result ordering with ORDER BY. This is not a bug; it is an inherent consequence of the fact that"
+      }
+    ],
+    "grounding_score_0_to_2": null,
+    "reviewer_notes": ""
+  }
+]

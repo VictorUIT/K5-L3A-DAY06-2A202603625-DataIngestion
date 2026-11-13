@@ -1,0 +1,253 @@
+{
+  "status": "passed",
+  "validated_at": "2026-11-14T01:35:38+07:00",
+  "reviewer": "Copilot AI assistant; quote and page checks are deterministic, answers were reviewed against the cited passages.",
+  "question_count": 20,
+  "split_counts": {
+    "dev": 15,
+    "test": 5
+  },
+  "filter_question_count": 8,
+  "test_filter_question_count": 5,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "max_content_tokens_per_chunk": 254,
+  "checks": [
+    {
+      "question_id": "q01",
+      "split": "dev",
+      "gold_page": 97,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": {
+        "chapter": "Chapter 5. Data Definition"
+      },
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q02",
+      "split": "dev",
+      "gold_page": 98,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q03",
+      "split": "dev",
+      "gold_page": 99,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q04",
+      "split": "dev",
+      "gold_page": 100,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q05",
+      "split": "dev",
+      "gold_page": 102,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q06",
+      "split": "dev",
+      "gold_page": 107,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q07",
+      "split": "dev",
+      "gold_page": 108,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q08",
+      "split": "dev",
+      "gold_page": 110,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": {
+        "chapter": "Chapter 5. Data Definition"
+      },
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q09",
+      "split": "dev",
+      "gold_page": 112,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q10",
+      "split": "dev",
+      "gold_page": 113,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q11",
+      "split": "dev",
+      "gold_page": 114,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q12",
+      "split": "dev",
+      "gold_page": 119,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q13",
+      "split": "dev",
+      "gold_page": 126,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q14",
+      "split": "dev",
+      "gold_page": 155,
+      "chapter": "Chapter 7. Queries",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": {
+        "chapter": "Chapter 7. Queries"
+      },
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q15",
+      "split": "dev",
+      "gold_page": 165,
+      "chapter": "Chapter 7. Queries",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": null,
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q16",
+      "split": "test",
+      "gold_page": 137,
+      "chapter": "Chapter 5. Data Definition",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": {
+        "chapter": "Chapter 5. Data Definition"
+      },
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q17",
+      "split": "test",
+      "gold_page": 156,
+      "chapter": "Chapter 7. Queries",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": {
+        "chapter": "Chapter 7. Queries"
+      },
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q18",
+      "split": "test",
+      "gold_page": 162,
+      "chapter": "Chapter 7. Queries",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": {
+        "chapter": "Chapter 7. Queries"
+      },
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q19",
+      "split": "test",
+      "gold_page": 174,
+      "chapter": "Chapter 7. Queries",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": {
+        "chapter": "Chapter 7. Queries"
+      },
+      "filter_matches_gold_chapter": true
+    },
+    {
+      "question_id": "q20",
+      "split": "test",
+      "gold_page": 182,
+      "chapter": "Chapter 7. Queries",
+      "evidence_quote_present": true,
+      "evidence_in_fixed_chunk": true,
+      "evidence_in_paragraph_chunk": true,
+      "filter": {
+        "chapter": "Chapter 7. Queries"
+      },
+      "filter_matches_gold_chapter": true
+    }
+  ]
+}

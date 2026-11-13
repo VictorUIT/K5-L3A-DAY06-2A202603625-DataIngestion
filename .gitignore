@@ -8,3 +8,5 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 *.sqlite
+
+postgresql-17-A4.pdf

@@ -1,0 +1,231 @@
+{
+  "benchmark_version": "2.0",
+  "corpus_source_id": "pg17_sql_ddl_queries",
+  "frozen_before_final_run": true,
+  "questions": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "type": "direct",
+      "question": "According to PostgreSQL 17 Chapter 5, what does the chapter explain how to create in order to hold data?",
+      "expected_answer": "Database structures that hold data, primarily tables.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 97,
+      "evidence_quote": "This chapter covers how one creates the database structures that will hold one's data.",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "type": "direct",
+      "question": "When a new row omits values for some columns, what happens to those columns?",
+      "expected_answer": "They are filled with their respective default values.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 98,
+      "evidence_quote": "When a new row is created and no values are specified for some of the columns, those columns will be filled with their respective default values."
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "How does an identity column generate key values?",
+      "expected_answer": "It is generated automatically from an implicit sequence.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 99,
+      "evidence_quote": "An identity column is a special column that is generated automatically from an implicit sequence. It can be used to generate key values."
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "type": "direct",
+      "question": "What data is a generated column computed from?",
+      "expected_answer": "It is always computed from other columns.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 100,
+      "evidence_quote": "A generated column is a special column that is always computed from other columns."
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "type": "direct",
+      "question": "What kind of condition can a CHECK constraint impose on a column value?",
+      "expected_answer": "The value must satisfy a Boolean expression.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 102,
+      "evidence_quote": "It allows you to specify that the value in a certain column must satisfy a Boolean (truth-value) expression."
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "type": "direct",
+      "question": "When a primary key is added, what index is created and what additional condition is imposed on the key columns?",
+      "expected_answer": "A unique B-tree index is created and the key columns are marked NOT NULL.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 107,
+      "evidence_quote": "Adding a primary key will automatically create a unique B-tree index on the column or group of columns listed in the primary key, and will force the column(s) to be marked NOT NULL."
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "type": "direct",
+      "question": "How can a foreign key reference a group of columns?",
+      "expected_answer": "Write it as a table constraint specifying the referencing and referenced column groups.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 108,
+      "evidence_quote": "A foreign key can also constrain and reference a group of columns. As usual, it then needs to be written in table constraint form."
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "type": "conditional",
+      "question": "In the Chapter 5 example, which foreign-key clause cascades a tenant deletion to referencing rows?",
+      "expected_answer": "Use ON DELETE CASCADE.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 110,
+      "evidence_quote": "tenant_id integer REFERENCES tenants ON DELETE CASCADE",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "type": "direct",
+      "question": "When adding a column without specifying DEFAULT, what initial value is used?",
+      "expected_answer": "NULL.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 112,
+      "evidence_quote": "The new column is initially filled with whatever default value is given (null if you don't specify a DEFAULT clause)."
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "type": "conditional",
+      "question": "When a column is removed, what happens to its data and the table constraints involving it?",
+      "expected_answer": "The column's data disappears and constraints involving it are dropped.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 113,
+      "evidence_quote": "Whatever data was in the column disappears. Table constraints involving the column are dropped, too."
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "type": "conditional",
+      "question": "Does ALTER COLUMN ... SET DEFAULT change existing rows or only affect future INSERT commands?",
+      "expected_answer": "It does not affect existing rows; it changes the default for future INSERT commands.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 114,
+      "evidence_quote": "Note that this doesn't affect any existing rows in the table, it just changes the default for future INSERT commands."
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "type": "direct",
+      "question": "Which SQL statement shown grants SELECT on mytable to PUBLIC?",
+      "expected_answer": "GRANT SELECT ON mytable TO PUBLIC;",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 119,
+      "evidence_quote": "GRANT SELECT ON mytable TO PUBLIC;"
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "type": "direct",
+      "question": "Besides tables, what named objects can a PostgreSQL schema contain?",
+      "expected_answer": "It can contain data types, functions, and operators, among other named objects.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 126,
+      "evidence_quote": "Schemas also contain other kinds of named objects, including data types, functions, and operators."
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "type": "direct",
+      "question": "According to Chapter 7, how does the FROM clause derive the table used as query input?",
+      "expected_answer": "From one or more table references in a comma-separated list.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 155,
+      "evidence_quote": "The FROM clause derives a table from one or more other tables given in a comma-separated table reference list.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "Which rows does GROUP BY combine into the same group?",
+      "expected_answer": "Rows with the same values in all listed columns.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 165,
+      "evidence_quote": "The GROUP BY clause is used to group together those rows in a table that have the same values in all the columns listed."
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "type": "direct",
+      "question": "In Chapter 5, how can a partition be removed while keeping it available as a standalone table?",
+      "expected_answer": "Remove it from the parent partitioned table while retaining it as a standalone table.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 137,
+      "evidence_quote": "Another option that is often preferable is to remove the partition from the partitioned table but retain access to it as a table in its own right.",
+      "filters": {
+        "chapter": "Chapter 5. Data Definition"
+      }
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "type": "paraphrase",
+      "question": "In a LEFT OUTER JOIN, what is added for a row in T1 that matches no row in T2?",
+      "expected_answer": "A joined row with null values in the columns of T2.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 156,
+      "evidence_quote": "for each row in T1 that does not satisfy the join condition with any row in T2, a joined row is added with null values in columns of T2.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "type": "conditional",
+      "question": "What does the LATERAL keyword allow a FROM subquery to reference?",
+      "expected_answer": "Columns provided by preceding FROM items.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 162,
+      "evidence_quote": "This allows them to reference columns provided by preceding FROM items.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "type": "conditional",
+      "question": "In Chapter 7, can ORDER BY sort using an output column label or number?",
+      "expected_answer": "Yes. A sort expression can be the label or number of an output column.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 174,
+      "evidence_quote": "A sort_expression can also be the column label or number of an output column",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "type": "direct",
+      "question": "In the Chapter 7 example, what does NOT MATERIALIZED let the parent query do?",
+      "expected_answer": "Apply its restrictions directly to scans of big_table instead of materializing a temporary copy.",
+      "gold_source_id": "pg17_sql_ddl_queries",
+      "gold_page": 182,
+      "evidence_quote": "so that the parent query's restrictions can be applied directly to scans of big_table.",
+      "filters": {
+        "chapter": "Chapter 7. Queries"
+      }
+    }
+  ]
+}
